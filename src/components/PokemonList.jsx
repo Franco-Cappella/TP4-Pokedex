@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPokemonList, getPokemonDetails } from '../services/pokeApi';
+import { getPokemonList, getPokemonDetails } from '../pokeApi';
 import { PokemonCard } from './PokemonCard';
 import { Loader } from './Loader';
 import { ErrorMessage } from './ErrorMessage';
