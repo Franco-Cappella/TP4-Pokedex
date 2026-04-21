@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.app-container {
+    max-width: 1000px; /* Lo amplié un poco para que la grilla respire mejor */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-header h1 {
+    color: #ef5350;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.app-header h1:hover {
+    transform: scale(1.05);
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contenedor para alinear el botón de volver y la tarjeta/error */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: #ef5350;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: #ffebee;
+}
