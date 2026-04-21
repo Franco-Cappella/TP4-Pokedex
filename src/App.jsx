@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getPokemonDetails, triggerIntentionalError } from '../pokeApi';
+import { getPokemonDetails, triggerIntentionalError } from './pokeApi';
 import { PokemonSearch } from './components/PokemonSearch';
 import { PokemonCard } from './components/PokemonCard';
 import { PokemonList } from './components/PokemonList';
