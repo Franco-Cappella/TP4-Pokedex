@@ -1,17 +1,89 @@
-# React + Vite
+# Mini Pokédex Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación desarrollada en React que consume la PokéAPI para buscar y mostrar información de Pokémon.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Endpoints utilizados
 
-## React Compiler
+### Obtener Pokémon por nombre o ID
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+GET /pokemon/{name}
+GET /pokemon/{id}
+```
 
-## Expanding the ESLint configuration
+Ejemplo:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# TP4-Pokedex" 
+```bash
+/pokemon/pikachu
+/pokemon/25
+```
+
+### Obtener lista de Pokémon
+
+```bash
+GET /pokemon?limit=20&offset=0
+```
+
+### Obtener Pokémon por tipo
+
+```bash
+GET /type/{type}
+```
+
+Ejemplo:
+
+```bash
+/type/fire
+```
+
+### Error intencional
+
+```bash
+GET /recurso-inexistente-404
+```
+
+Utilizado para probar manejo de errores.
+
+---
+
+## Estructura del proyecto
+
+```bash
+src/
+│── components/
+│   ├── PokemonSearch.jsx
+│   ├── PokemonCard.jsx
+│   ├── PokemonList.jsx
+│   ├── Loader.jsx
+│   └── ErrorMessage.jsx
+│
+│── pokeApi.js
+│── App.jsx
+│── App.css
+│── main.jsx
+```
+
+* **pokeApi.js:** funciones para consumir la API.
+* **App.jsx:** componente principal y manejo de estados.
+* **components/**: componentes reutilizables de interfaz.
+
+---
+
+## Decisiones tomadas
+
+* Se utilizó Axios para facilitar las peticiones HTTP.
+* Se usó async/await para mejorar legibilidad.
+* Se separó la lógica de API en un archivo independiente.
+* Se dividió la interfaz en componentes reutilizables.
+* Se agregó botón para volver a la lista principal.
+
+---
+
+## Dificultades encontradas
+
+* Manejar errores cuando el Pokémon no existe.
+* Controlar estados de carga correctamente.
+* Mostrar diferentes vistas según el estado (lista, resultado, error).
+* Organizar el proyecto en componentes claros y ordenados.
