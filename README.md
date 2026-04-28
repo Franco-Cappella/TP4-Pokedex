@@ -81,9 +81,4 @@ Se agregó botón para volver a la lista principal.
 
 
 
- Dificultades encontradas
-
-Manejar errores cuando el Pokémon no existe.
-Controlar estados de carga correctamente.
-Mostrar diferentes vistas según el estado (lista, resultado, error).
-Organizar el proyecto en componentes claros y ordenados.
+ 
